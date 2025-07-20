@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Marca</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-5 bg-black border-b border-white">
+    <div class="flex items-center space-x-3">
+      <img src="assets/img/logo.png" alt="Logo" class="w-10 h-10 rounded-full">
+      <span class="text-2xl font-light tracking-widest">Mi Marca</span>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-sm">
+      <a href="#inicio" class="hover:underline">Inicio</a>
+      <a href="#servicios" class="hover:underline">Servicios</a>
+      <a href="#contacto" class="hover:underline">Contacto</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden text-white text-2xl">&#9776;</button>
+  </header>
+
+  <!-- Sidebar responsive -->
+  <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 h-full w-56 bg-black border-r border-white p-6 z-50">
+    <button id="closeMenu" class="text-white text-xl mb-4">✕</button>
+    <nav class="flex flex-col space-y-4 text-lg">
+      <a href="#inicio" class="hover:underline">Inicio</a>
+      <a href="#servicios" class="hover:underline">Servicios</a>
+      <a href="#contacto" class="hover:underline">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <section id="inicio" class="text-center py-24 px-6">
+    <h1 class="text-5xl font-extralight mb-4 tracking-wide">Impulsa tu presencia digital</h1>
+    <p class="text-gray-300 mb-8">Creamos experiencias web limpias, modernas y funcionales.</p>
+    <a href="#contacto" class="bg-white text-black px-8 py-3 rounded-full text-sm tracking-widest uppercase">Contáctanos</a>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="bg-black border-t border-white py-16 px-6">
+    <h2 class="text-3xl font-light text-center mb-10">Nuestros Servicios</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div class="border border-white p-6 rounded hover:bg-white hover:text-black transition">Diseño Web Moderno</div>
+      <div class="border border-white p-6 rounded hover:bg-white hover:text-black transition">Integración con WhatsApp</div>
+      <div class="border border-white p-6 rounded hover:bg-white hover:text-black transition">Formulario de Contacto</div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-20 px-6 text-center border-t border-white">
+    <h2 class="text-3xl font-light mb-10">Contáctanos</h2>
+    <form class="max-w-md mx-auto space-y-5">
+      <input type="text" placeholder="Tu nombre" required class="w-full p-3 bg-black border border-white text-white rounded">
+      <input type="email" placeholder="Tu correo" required class="w-full p-3 bg-black border border-white text-white rounded">
+      <textarea placeholder="Mensaje" required class="w-full p-3 bg-black border border-white text-white rounded"></textarea>
+      <button type="submit" class="bg-white text-black px-6 py-2 rounded-full text-sm uppercase tracking-wider">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="text-center p-6 border-t border-white text-sm text-gray-400">
+    <p>&copy; 2025 Mi Marca. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById("menuBtn").onclick = () => {
+      document.getElementById("mobileMenu").classList.remove("hidden");
+    };
+    document.getElementById("closeMenu").onclick = () => {
+      document.getElementById("mobileMenu").classList.add("hidden");
+    };
+  </script>
+
+</body>
+</html>
