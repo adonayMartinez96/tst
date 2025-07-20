@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Marca</title>
+  <title id="site-title">Mi Marca</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white font-sans">
@@ -11,8 +11,8 @@
   <!-- Header -->
   <header class="flex justify-between items-center p-5 bg-black border-b border-white">
     <div class="flex items-center space-x-3">
-      <img src="assets/img/logo.png" alt="Logo" class="w-10 h-10 rounded-full">
-      <span class="text-2xl font-light tracking-widest">Mi Marca</span>
+      <img src="assets/img/logo.png" alt="Logo" class="w-10 h-10 rounded-full" id="logo">
+      <span id="marca" class="text-2xl font-light tracking-widest">Mi Marca</span>
     </div>
     <nav class="hidden md:flex space-x-8 text-sm">
       <a href="#inicio" class="hover:underline">Inicio</a>
@@ -34,8 +34,8 @@
 
   <!-- Hero -->
   <section id="inicio" class="text-center py-24 px-6">
-    <h1 class="text-5xl font-extralight mb-4 tracking-wide">Impulsa tu presencia digital</h1>
-    <p class="text-gray-300 mb-8">Creamos experiencias web limpias, modernas y funcionales.</p>
+    <h1 id="titulo-hero" class="text-5xl font-extralight mb-4 tracking-wide">Impulsa tu presencia digital</h1>
+    <p id="descripcion-hero" class="text-gray-300 mb-8">Creamos experiencias web limpias, modernas y funcionales.</p>
     <a href="#contacto" class="bg-white text-black px-8 py-3 rounded-full text-sm tracking-widest uppercase">Contáctanos</a>
   </section>
 
@@ -52,7 +52,7 @@
   <!-- Contacto -->
   <section id="contacto" class="py-20 px-6 text-center border-t border-white">
     <h2 class="text-3xl font-light mb-10">Contáctanos</h2>
-    <form class="max-w-md mx-auto space-y-5">
+    <form id="form-contacto" class="max-w-md mx-auto space-y-5">
       <input type="text" placeholder="Tu nombre" required class="w-full p-3 bg-black border border-white text-white rounded">
       <input type="email" placeholder="Tu correo" required class="w-full p-3 bg-black border border-white text-white rounded">
       <textarea placeholder="Mensaje" required class="w-full p-3 bg-black border border-white text-white rounded"></textarea>
@@ -61,17 +61,10 @@
   </section>
 
   <footer class="text-center p-6 border-t border-white text-sm text-gray-400">
-    <p>&copy; 2025 Mi Marca. Todos los derechos reservados.</p>
+    <p>&copy; 2025 <span id="footer-marca">Mi Marca</span>. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    document.getElementById("menuBtn").onclick = () => {
-      document.getElementById("mobileMenu").classList.remove("hidden");
-    };
-    document.getElementById("closeMenu").onclick = () => {
-      document.getElementById("mobileMenu").classList.add("hidden");
-    };
-  </script>
-
+  <!-- JS externo -->
+  <script src="js/script.js"></script>
 </body>
 </html>
